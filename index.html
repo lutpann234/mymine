@@ -2,18 +2,19 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💝 HANYA UNTUK KAMU NATASYA 💝</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>💝 HANYA UNTUK KAMU SAYANGKU 💝</title>
     <style>
         *{margin:0;padding:0;box-sizing:border-box;}
+        html,body{width:100%;overflow-x:hidden;}
         body{
             min-height:100vh;
             background:linear-gradient(45deg,#ff0080,#ff4081,#ff80ab,#f8bbd0,#fce4ec);
             background-size:600% 600%;
             animation: bgCinta 3s ease infinite;
-            font-family:'Segoe UI', 'Brush Script MT', cursive, sans-serif;
-            overflow:hidden;
+            font-family:'Segoe UI', sans-serif;
             display:flex;justify-content:center;align-items:center;
+            padding:20px 15px;
         }
         @keyframes bgCinta{
             0%{background-position:0% 50%;}
@@ -26,111 +27,92 @@
         .bunga-cinta{
             background:rgba(255,255,255,0.15);
             backdrop-filter:blur(20px);
-            border-radius:35px;
-            padding:50px 30px;
+            border-radius:30px;
+            padding:30px 20px;
             text-align:center;
-            box-shadow:0 0 60px rgba(255,0,100,.4), inset 0 0 30px rgba(255,255,255,.2);
-            border:3px solid transparent;
+            box-shadow:0 0 40px rgba(255,0,100,.4);
+            border:2px solid rgba(255,255,255,.2);
             position:relative;z-index:10;
-            max-width:93%;
-            animation: munculNaik 1.2s ease-out, berkilau 2s infinite alternate;
+            width:100%;max-width:420px;
+            animation: munculNaik 1.2s ease-out;
         }
         @keyframes munculNaik{
-            0%{transform:translateY(80px) scale(0.7);opacity:0;}
-            100%{transform:translateY(0) scale(1);opacity:1;}
-        }
-        @keyframes berkilau{
-            0%{box-shadow:0 0 60px rgba(255,0,100,.45), inset 0 0 30px rgba(255,255,255,.25);}
-            100%{box-shadow:0 0 80px rgba(255,0,100,.6), inset 0 0 40px rgba(255,255,255,.35);}
+            0%{transform:translateY(50px);opacity:0;}
+            100%{transform:translateY(0);opacity:1;}
         }
 
         h1{
-            font-size:2.3em;margin-bottom:20px;
-            background:linear-gradient(90deg,#d81b60,#e91e63,#ff4081,#f06292,#f48fb1,#ff4081,#e91e63);
+            font-size:clamp(1.6em,5vw,2.2em);margin-bottom:15px;
+            background:linear-gradient(90deg,#d81b60,#e91e63,#ff4081,#f48fb1,#ff4081,#e91e63);
             background-size:400% 400%;
             -webkit-background-clip:text;
             -webkit-text-fill-color:transparent;
             animation: pelangiTeks 3s linear infinite;
         }
-        @keyframes pelangiTeks{
-            0%{background-position:0% 50%;}
-            100%{background-position:400% 50%;}
-        }
+        @keyframes pelangiTeks{0%{background-position:0% 50%;}100%{background-position:400% 50%;}}
 
         .hati-raksasa{
-            font-size:100px;margin:15px 0;
+            font-size:clamp(70px,18vw,90px);margin:10px 0;
             animation: detakKencang 0.5s infinite;
-            filter:drop-shadow(0 0 30px #ff0080);
+            filter:drop-shadow(0 0 20px #ff0080);
         }
         @keyframes detakKencang{
-            0%,100%{transform:scale(1);filter:drop-shadow(0 0 30px #ff0080);}
-            25%{transform:scale(1.25);filter:drop-shadow(0 0 50px #ff4081);}
-            50%{transform:scale(1);}
-            75%{transform:scale(1.25);filter:drop-shadow(0 0 50px #ff4081);}
+            0%,100%{transform:scale(1);}
+            25%{transform:scale(1.2);}
+            75%{transform:scale(1.2);}
         }
 
-        .cincin{font-size:45px;margin:10px 0;animation: putar 4s linear infinite;}
+        .cincin{font-size:clamp(35px,10vw,45px);margin:5px 0 15px;animation: putar 4s linear infinite;}
         @keyframes putar{0%{transform:rotateY(0deg);}100%{transform:rotateY(360deg);}}
 
         .surat{
-            font-size:1.1em;line-height:2.2;border-radius:25px;
-            background:linear-gradient(135deg,rgba(255,255,255,.3),rgba(255,230,240,.3));
-            padding:25px 20px;margin:20px 0;
+            font-size:clamp(0.95em,3.5vw,1.05em);line-height:1.9;border-radius:20px;
+            background:rgba(255,255,255,.25);
+            padding:18px 15px;margin:15px 0;
             color:#6d0b47;font-weight:500;
-            border:2px solid rgba(255,64,129,.3);
-            animation: munculFade 2s ease 0.5s both;
+            border:2px solid rgba(255,64,129,.2);
+            text-align:center;
         }
-        @keyframes munculFade{0%{opacity:0;transform:translateY(20px);}100%{opacity:1;transform:translateY(0);}}
 
         .tombol-cinta{
-            margin-top:10px;padding:16px 40px;font-size:1.2em;font-weight:bold;
+            margin-top:8px;padding:14px 28px;font-size:clamp(1em,4vw,1.15em);font-weight:bold;
             background:linear-gradient(90deg,#ff1744,#f50057,#ff4081,#ff80ab,#ff4081,#f50057,#ff1744);
             background-size:400% 400%;
-            color:white;border:none;border-radius:60px;cursor:pointer;
-            box-shadow:0 0 30px rgba(245,0,87,.6);
+            color:white;border:none;border-radius:50px;cursor:pointer;
+            box-shadow:0 0 25px rgba(245,0,87,.5);
             transition:all 0.3s ease;animation: tombolNyala 2s linear infinite;
+            width:100%;
         }
         @keyframes tombolNyala{
-            0%{background-position:0% 50%;box-shadow:0 0 30px rgba(245,0,87,.6);}
-            50%{background-position:100% 50%;box-shadow:0 0 50px rgba(245,0,87,.8);}
-            100%{background-position:0% 50%;box-shadow:0 0 30px rgba(245,0,87,.6);}
-        }
-        .tombol-cinta:hover{transform:scale(1.1);letter-spacing:1px;}
-
-        .rahasia-terindah{
-            display:none;margin-top:25px;padding:25px;
-            background:linear-gradient(135deg,#fff0f5,#ffe4ec,#ffd6e0,#ffe4ec,#fff0f5);
-            background-size:300% 300%;
-            border-radius:25px;color:#880e4f;font-size:1.15em;line-height:2;
-            animation: munculLedak 1s ease forwards, gradasi 3s ease infinite;
-            border:3px solid #ff4081;box-shadow:0 0 40px rgba(255,64,129,.3);
-        }
-        @keyframes munculLedak{
-            0%{opacity:0;transform:scale(0.3) rotate(-10deg);}
-            50%{transform:scale(1.1) rotate(2deg);}
-            100%{opacity:1;transform:scale(1) rotate(0deg);}
-        }
-        @keyframes gradasi{
             0%{background-position:0% 50%;}
             50%{background-position:100% 50%;}
             100%{background-position:0% 50%;}
         }
+        .tombol-cinta:active{transform:scale(0.97);}
 
-        /* ✅ TOMBOL WHATSAPP - SUDAH ADA DISINI ✅ */
+        .rahasia-terindah{
+            display:none;margin-top:20px;padding:20px 15px;
+            background:linear-gradient(135deg,#fff0f5,#ffe4ec,#ffd6e0,#ffe4ec,#fff0f5);
+            background-size:300% 300%;
+            border-radius:20px;color:#880e4f;font-size:clamp(0.95em,3.5vw,1.05em);line-height:1.8;
+            animation: munculLedak 1s ease forwards;
+            border:2px solid #ff4081;box-shadow:0 0 30px rgba(255,64,129,.25);
+        }
+        @keyframes munculLedak{
+            0%{opacity:0;transform:scale(0.8);}
+            100%{opacity:1;transform:scale(1);}
+        }
+
+        /* ✅ TOMBOL WHATSAPP — SUDAH ADA */
         .tombol-wa{
-            display:none;margin-top:25px;padding:15px 30px;font-size:1.2em;font-weight:bold;
+            display:none;margin-top:20px;padding:14px 25px;font-size:clamp(1em,4vw,1.15em);font-weight:bold;
             background:linear-gradient(90deg,#25D366,#128C7E);
             color:white;border:none;border-radius:50px;cursor:pointer;
-            box-shadow:0 0 25px rgba(37,211,102,.5);
+            box-shadow:0 0 20px rgba(37,211,102,.45);
             transition:all 0.3s ease;
-            animation: waNyala 2s infinite alternate;
-            text-decoration:none;display:inline-block;
+            text-decoration:none;display:inline-block;width:100%;
         }
-        @keyframes waNyala{
-            0%{box-shadow:0 0 20px rgba(37,211,102,.5);}
-            100%{box-shadow:0 0 40px rgba(37,211,102,.8);}
-        }
-        .tombol-wa:hover{transform:scale(1.1);}
+        .tombol-wa:active{transform:scale(0.97);}
 
         .partikel{
             position:absolute;pointer-events:none;z-index:1;
@@ -138,8 +120,7 @@
         }
         @keyframes terbang{
             0%{transform:translateY(100vh) rotate(0deg);opacity:1;}
-            50%{opacity:0.8;}
-            100%{transform:translateY(-150px) rotate(1080deg);opacity:0;}
+            100%{transform:translateY(-150px) rotate(720deg);opacity:0;}
         }
     </style>
 </head>
@@ -157,7 +138,7 @@
         karena Allah telah mengirimkan kamu ke dalam hidupku 🥺❤️<br><br>
         Kamu bukan sekadar just friend... Kamu adalah rumah bagi hatiku 🏡💕<br>
         Tempatku pulang, tempatku tenang, tempatku bahagia ☀️<br>
-        Senyummu adalah matahariku, tawamu adalah musik di telingaku 🎶<br>
+        kehadiranmu adalah matahariku, tawamu adalah musik di telingaku 🎶<br>
         Tanpamu, duniaku terasa sepi dan kelabu 🌧️→🌈<br><br>
         Terima kasih sudah ada, terima kasih sudah bertahan,<br>
         terima kasih sudah menjadi dirimu yang luar biasa ini 💖
@@ -167,7 +148,7 @@
 
     <div class="rahasia-terindah" id="duniaCinta">
         💖💗💕💓💞💝💘❤️‍🔥💖💗💕💓<br>
-        <strong style="font-size:1.4em;color:#c2185b;">AKU SANGAT SANGAT SANGAT SAYANG KAMU</strong><br>
+        <strong style="font-size:1.2em;color:#c2185b;">AKU SANGAT SANGAT SANGAT SAYANG KAMU</strong><br>
         <em>Tak cukup satu juta kata untuk menggambarkan betapa berartinya kamu bagiku</em> 💌<br><br>
         🤲 Semoga Allah SWT selalu meridhoi hubungan kita,<br>
         Menjaga hati kita agar selalu dalam jalan-Nya,<br>
@@ -180,46 +161,41 @@
         💖💗💕💓💞💝💘❤️‍🔥💖💗💕💓
     </div>
 
-    <!-- ============================================== -->
-    <!-- ⚠️ GANTI NOMOR DI BAWAH INI YA! -->
-    <!-- Ganti angka 6281234567890 jadi nomor WA kamu -->
-    <!-- Contoh: 0812xxx → jadi 62812xxx -->
-    <!-- ============================================== -->
+    <!-- ⚠️ GANTI NOMOR DI BAWAH INI: 62 + nomor HP tanpa 0 -->
     <a class="tombol-wa" id="waBtn" href="https://wa.me/628155049930?text=Halo%20Sayang%20%F0%9F%92%96%20Aku%20sudah%20buka%20pesanmu%20%F0%9F%92%81" target="_blank">
         💬 KLIK DISINI BALAS PESANKU 💬
     </a>
 </div>
 
 <script>
-const koleksiSimbol = ['❤️','💕','💖','💗','💓','💞','💝','💘','❤️‍🔥','💌','🌹','🌸','🌷','💐','✨','⭐','🌟','💫','💍','💎','👑','🎀','💑','🤍','💜','💙','💚','🧡','💛'];
+const koleksiSimbol = ['❤️','💕','💖','💗','💓','💞','💝','💘','❤️‍🔥','💌','🌹','🌸','🌷','💐','✨','⭐','🌟','💫','💍','💎','👑','🎀'];
 setInterval(()=>{
     const partikelBaru = document.createElement('div');
     partikelBaru.className = 'partikel';
     partikelBaru.textContent = koleksiSimbol[Math.floor(Math.random()*koleksiSimbol.length)];
     partikelBaru.style.left = Math.random()*100 + 'vw';
-    partikelBaru.style.fontSize = (Math.random()*35+15) + 'px';
-    partikelBaru.style.animationDuration = (Math.random()*6+5) + 's';
+    partikelBaru.style.fontSize = (Math.random()*25+12) + 'px';
+    partikelBaru.style.animationDuration = (Math.random()*5+5) + 's';
     document.body.appendChild(partikelBaru);
-    setTimeout(()=>partikelBaru.remove(),11000);
-},100);
+    setTimeout(()=>partikelBaru.remove(),10000);
+},150);
 
 function bukaDuniaCinta(){
     document.getElementById('duniaCinta').style.display = 'block';
-    // ✅ INI YANG BIKIN TOMBOL WA MUNCUL!
-    document.getElementById('waBtn').style.display = 'inline-block';
+    document.getElementById('waBtn').style.display = 'block';
     
-    for(let i=0;i<80;i++){
+    for(let i=0;i<50;i++){
         setTimeout(()=>{
             const ledakCinta = document.createElement('div');
             ledakCinta.style.position='fixed';
-            ledakCinta.style.left= (40 + Math.random()*20)+'%';
-            ledakCinta.style.top= (30 + Math.random()*40)+'%';
-            ledakCinta.style.fontSize=(Math.random()*40+25)+'px';
+            ledakCinta.style.left= (20 + Math.random()*60)+'%';
+            ledakCinta.style.top= (20 + Math.random()*60)+'%';
+            ledakCinta.style.fontSize='30px';
             ledakCinta.textContent=koleksiSimbol[Math.floor(Math.random()*koleksiSimbol.length)];
             ledakCinta.style.zIndex='9999';
             document.body.appendChild(ledakCinta);
             setTimeout(()=>ledakCinta.remove(),2000);
-        },i*25);
+        },i*30);
     }
 }
 </script>
